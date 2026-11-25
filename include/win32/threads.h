@@ -183,6 +183,8 @@ HANDLE WINAPI CreateThread(
         LPDWORD lpThreadId);
 HANDLE WINAPI GetCurrentThread(void);
 DWORD WINAPI GetCurrentThreadId(void);
+DWORD WINAPI GetThreadId(
+        HANDLE Thread);
 DWORD_PTR WINAPI SetThreadAffinityMask(
         HANDLE hThread,
         DWORD_PTR dwThreadAffinityMask);
@@ -207,6 +209,9 @@ BOOL WINAPI SwitchToThread(void);
 HRESULT WINAPI SetThreadDescription(
         HANDLE hThread,
         PCWSTR lpThreadDescription);
+BOOL WINAPI GetExitCodeThread(
+        HANDLE hThread,
+        LPDWORD lpExitCode);
 
 /* ========================================================================== */
 /* CriticalSection Functions: */
